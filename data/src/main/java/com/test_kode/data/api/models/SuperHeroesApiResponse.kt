@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class SuperHeroesApiResponse(
     @SerializedName("id")
-    val id : Int? = null,
+    val id: Int? = null,
 
     @SerializedName("name")
     val name: String? = null,
@@ -25,7 +25,6 @@ data class SuperHeroesApiResponse(
     val images: Images? = null
 )
 
-
 data class Appearance(
     @SerializedName("race")
     val race: String? = null,
@@ -44,7 +43,9 @@ data class Biography(
 
 data class Images(
     @SerializedName("lg")
-    val lg: String? = null
+    val lg: String? = null,
+    @SerializedName("sm")
+    val sm: String? = null
 )
 
 data class Powerstats(

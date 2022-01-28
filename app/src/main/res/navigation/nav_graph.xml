@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchScreenFragment">
+
+    <fragment
+        android:id="@+id/launchScreenFragment"
+        android:name="com.test_kode.superheroes.ui.launch_screen.LaunchScreenFragment"
+        android:label="fragment_launch_screen"
+        tools:layout="@layout/fragment_launch_screen" >
+
+        <action
+            android:id="@+id/action_launchScreenFragment_to_superHeroesFragment"
+            app:destination="@id/superHeroesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/superHeroesFragment"
+        android:name="com.test_kode.superheroes.ui.heroes.SuperHeroesFragment"
+        android:label="fragment_super_heroes"
+        tools:layout="@layout/fragment_super_heroes" >
+        <action
+            android:id="@+id/action_superHeroesFragment_to_superHeroesDetailFragment"
+            app:destination="@id/superHeroesDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/superHeroesDetailFragment"
+        android:name="com.test_kode.superheroes.ui.hero_detail.SuperHeroesDetailFragment"
+        android:label="fragment_super_heroes_detail"
+        tools:layout="@layout/fragment_super_heroes_detail">
+        <argument
+            android:name="superHeroName"
+            app:argType="string"/>
+    </fragment>
+</navigation>

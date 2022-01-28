@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.test_kode.data.database.dao.SuperHeroesDao
 import com.test_kode.data.database.models.SuperHero
 
-@Database(entities = [SuperHero::class], version = 1, exportSchema = false)
+@Database(entities = [SuperHero::class], version = 2, exportSchema = false)
 abstract class SuperHeroDatabase : RoomDatabase() {
     abstract fun superHeroDao(): SuperHeroesDao
 

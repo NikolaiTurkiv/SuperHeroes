@@ -5,9 +5,8 @@ import kotlinx.coroutines.flow.Flow
 
 interface SuperHeroRepository {
     fun getAllHeroes(): Flow<List<SuperHero>>
-    suspend fun insert(superHeroesList : List<SuperHero>)
-    fun getAllStudioHeroes(comixStudio:String) : Flow<List<SuperHero>>
-    suspend fun removeRedundant(marvelStudio:String,dcStudio:String)
-     fun getSuperHero(name:String): SuperHero
+    fun insertList(superHeroesList: List<SuperHero>)
+    fun getAllStudioHeroes(comixStudio: String): Flow<List<SuperHero>>
+    fun getSuperHero(name: String): SuperHero
     fun removeAll()
 }

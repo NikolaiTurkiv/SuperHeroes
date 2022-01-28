@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_background"
+    tools:context=".ui.hero_detail.SuperHeroesDetailFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/superhero_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/superhero_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/commando"
+        android:text="@string/superhero"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/biography_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="@string/biography"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/superhero_name" />
+
+    <TextView
+        android:id="@+id/detail_real_name_label"
+        style="@style/lables_detail_info_style"
+        android:text="@string/real_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/biography_label" />
+
+    <TextView
+        android:id="@+id/detail_real_name"
+        app:layout_constraintEnd_toStartOf="@+id/screen_divider"
+        app:layout_constraintStart_toStartOf="@+id/detail_real_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/detail_real_name_label"
+        style="@style/cahnge_detail_info_text_style" />
+
+    <TextView
+        android:id="@+id/race_label"
+        style="@style/lables_detail_info_style"
+        android:layout_marginStart="4dp"
+        android:text="@string/race"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_real_name" />
+
+    <TextView
+        android:id="@+id/race"
+
+        style="@style/cahnge_detail_info_text_style"
+        app:layout_constraintEnd_toStartOf="@+id/screen_divider"
+        app:layout_constraintStart_toStartOf="@+id/race_label"
+        app:layout_constraintTop_toBottomOf="@+id/race_label" />
+
+    <TextView
+        android:id="@+id/pl_of_birth_label"
+        android:text="@string/place_of_birth"
+        style="@style/lables_detail_info_style"
+        app:layout_constraintStart_toStartOf="@+id/screen_divider"
+        app:layout_constraintTop_toBottomOf="@+id/biography_label" />
+
+    <TextView
+        android:id="@+id/ocypation_label"
+        style="@style/lables_detail_info_style"
+        android:text="@string/ocupation"
+        app:layout_constraintStart_toStartOf="@+id/screen_divider"
+        app:layout_constraintTop_toBottomOf="@+id/pl_of_birth" />
+
+    <TextView
+        android:id="@+id/pl_of_birth"
+        style="@style/cahnge_detail_info_text_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pl_of_birth_label"
+        app:layout_constraintTop_toBottomOf="@+id/pl_of_birth_label" />
+
+    <TextView
+        android:id="@+id/ocupation"
+        style="@style/cahnge_detail_info_text_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ocypation_label"
+        app:layout_constraintTop_toBottomOf="@+id/ocypation_label" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/information_super_hero_with_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ocupation" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

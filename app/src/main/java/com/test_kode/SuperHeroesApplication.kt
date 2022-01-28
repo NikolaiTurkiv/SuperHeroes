@@ -6,5 +6,5 @@ import com.test_kode.data.repository.SuperHeroRepositoryImpl
 
 class SuperHeroesApplication : Application() {
     val database by lazy { SuperHeroDatabase.getDatabase(this) }
-    val repositoryImpl by lazy {SuperHeroRepositoryImpl(database.superHeroDao())}
+    val repositoryImpl by lazy { SuperHeroRepositoryImpl(database.superHeroDao()) }
 }

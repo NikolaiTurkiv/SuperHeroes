@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">SuperHeroes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="strength">Strength</string>
+    <string name="speed">Speed</string>
+    <string name="power">Power</string>
+    <string name="superhero">SUPERHERO</string>
+    <string name="biography">Biography</string>
+    <string name="real_name">Real name:</string>
+    <string name="race">Race:</string>
+    <string name="rece">...rece</string>
+    <string name="place_of_birth">Place of birth:</string>
+    <string name="ocupation">Ocupation</string>
 </resources>
